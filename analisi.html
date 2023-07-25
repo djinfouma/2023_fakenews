@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Journalism Project - Analisi</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Paper Kit 2 CSS -->
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/paper-kit.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .enlarge-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+    .card-header .btn:after {
+      content: "\f078";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      float: right;
+      margin-left: 5px;
+    }
+    .navbar{
+ background-color: #324a7f;
+}
+
+div > p{
+margin-top: 10px;
+}
+    .card-header .collapsed:after {
+      content: "\f077";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      float: right;
+      margin-left: 5px;
+    }
+    .enlarge-image{
+    	width: 50%;
+    }
+/* This will affect the entire document */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scroll handle */
+  border-radius: 5px; /* Round the corners of the scroll handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken the color of the scroll handle on hover */
+}
+
+.card a:not(.btn), .card a:not(.btn):hover{
+color: #51bcda;
+}
+
+    text {
+      font-size: 11px;
+    }
+    .node {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+  </style>
+</head>
+
+<body class="about-us">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand text-white" href="index.html">Data Journalism</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dati.html">Dati</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="analisi.html">Analisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="interviste.html">Interviste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Corpo -->
+  <div class="wrapper">
+    <div class="page-header page-header-small section-image" style="background-image: url('img/analisi.jpg');">
+  <div class="content-center">
+    <div class="container text-white">
+      <h1>Analisi</h1>
+    </div>
+  </div>
+</div> 
+
+
+
+
+<div class="container mb-4">
+  <div class="accordion" id="myAccordion">
+    <h2>Rispondiamo a qualche domanda</h2>
+    <p>Clicca sulle card per vedere la risposta. Puoi cliccare sulle immagini per ingrandirle.</p>
+    <!-- Inizia la prima card -->
+    <div class="card mt-4">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Hai mai sentito parlare di fake news?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#myAccordion">
+        <div class="card-body">
+          <a href="img/domanda1.png" data-lightbox="gallery" data-title="Description for Image 1">
+            <img class="enlarge-image img-fluid mx-auto d-block" src="img/domanda1.png" alt="Image 1">
+          </a>
+          <p>Durante un sondaggio sul social network “After School” è stata posta questa domanda a circa 40 mila studenti di diversi stati americani in età stimata tra i 14 ed i 18 anni. I risultati sono stati pubblicati nel 2017: l’82% degli studenti aveva già sentito parlare di fake news. <br><a href="https://data.world/afterschool/teen-fake-news-poll-on-after-school">Fonte<a>
+</p>
+        </div>
+      </div>
+    </div>
+    <!-- Inizia la seconda card -->
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Pensi di essere bravo a riconoscere le fake news?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#myAccordion">
+        <div class="card-body">
+          <a href="img/domanda2.png" data-lightbox="gallery" data-title="Description for Image 2">
+            <img class="enlarge-image img-fluid mx-auto d-block" src="img/domanda2.png" alt="Image 2">
+          </a>
+          <p>Durante un sondaggio sul social network “After School” è stata posta questa domanda a circa 40 mila studenti di diversi stati americani in età stimata tra i 14 ed i 18 anni. I risultati sono stati pubblicati nel 2017: il 64% degli studenti pensa di essere in grado di riconoscere le fake news.          <br><a href="https://data.world/afterschool/teen-fake-news-poll-on-after-school">Fonte<a>
+</p>
+        </div>
+      </div>
+    </div>
+    <!-- Continua così per le altre cards -->
+    <!-- Inizia la terza card -->
+<div class="card">
+  <div class="card-header" id="headingThree">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Se ti accorgi che qualcuno sta condividendo delle fake news, che cosa fai?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/domanda3.png" data-lightbox="gallery" data-title="Description for Image 3">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/domanda3.png" alt="Image 3">
+      </a>
+      <p>Durante un sondaggio sul social network “After School” è stata posta questa domanda a circa 40 mila studenti di diversi stati americani in età stimata tra i 14 ed i 18 anni. I risultati sono stati pubblicati nel 2017: il 61% degli studenti ignora deliberatamente chi condivide delle fake news, e solo il 31% lo farebbe notare.                 <br><a href="https://data.world/afterschool/teen-fake-news-poll-on-after-school">Fonte<a>
+</p>
+    </div>
+  </div>
+</div>
+<!-- Inizia la quarta card -->
+<div class="card">
+  <div class="card-header" id="headingFour">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Credi che la maggioranza degli articoli online sia vera?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/domanda4.png" data-lightbox="gallery" data-title="Description for Image 4">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/domanda4.png" alt="Image 4">
+      </a>
+            <p>Durante un sondaggio sul social network “After School” è stata posta questa domanda a circa 40 mila studenti di diversi stati americani in età stimata tra i 14 ed i 18 anni. I risultati sono stati pubblicati nel 2017: il 65% degli studenti ritiene che la maggioranza degli articoli online non diffonda notizie vere.            <br><a href="https://data.world/afterschool/teen-fake-news-poll-on-after-school">Fonte<a>
+</p>
+    </div>
+  </div>
+</div>
+<!-- Inizia la quinta card -->
+<div class="card">
+  <div class="card-header" id="headingFive">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        Se un articolo di news online non stesse raccontando la verità, credi che sapresti capirlo?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/domanda5.png" data-lightbox="gallery" data-title="Description for Image 5">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/domanda5.png" alt="Image 5">
+      </a>
+      <p>Durante un sondaggio sul social network “After School” è stata posta questa domanda a circa 40 mila studenti di diversi stati americani in età stimata tra i 14 ed i 18 anni. I risultati sono stati pubblicati nel 2017: il 53% degli studenti ritiene di saper capire quando un articolo non racconta delle notizie vere.                  <br><a href="https://data.world/afterschool/teen-fake-news-poll-on-after-school">Fonte<a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Start card 6 -->
+<div class="card">
+  <div class="card-header" id="headingSix">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Di cosa parlano le fake news?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/ambiti.png" data-lightbox="gallery" data-title="Description for Image 6">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/ambiti.png" alt="Image 6">
+      </a>
+      <p>Per una ricerca di fake news detection sono stati raccolti più di 12 mila brevi dichiarazioni in vari contesti dal sito politifact.com. A partire dalle dichiarazioni etichettate manualmente come false (circa 8 mila) sono state raccolte informazioni sulle tematiche trattate maggiormente, in seguito ad un processo di pulizia dei dati. E’ emerso che il 20% delle dichiarazioni false riguardano temi economici, come tasse, lavoro e budget. Il 16% riguarda tematiche politiche, in particolare le elezioni, seguite dal 12% sulla sanità, con ospedali, malattie e droghe e dall'11% sulla guerra. Tra il 7 ed il 5% si hanno dichiarazioni riguardanti educazione, ambiente, giustizia e lavoro.
+<br><a href="https://paperswithcode.com/dataset/liar">Fonte</a></p>
+    </div>
+  </div>
+</div>
+<!-- Continues like this for the other cards -->
+<!-- Start card 7 -->
+<div class="card">
+  <div class="card-header" id="headingSeven">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        Quali sono i maggiori canali di diffusione?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#myAccordion">
+    <div class="card-body">
+
+<div class='tableauPlaceholder' id='viz1690211920685' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contesti_interattivi_v4&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='contesti_interattivi_v4&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contesti_interattivi_v4&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it-IT' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1690211920685');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>             
+<p>
+Per una ricerca di fake news detection sono stati raccolti più di 12 mila brevi dichiarazioni in vari contesti dal sito politifact.com. A partire dalle dichiarazioni etichettate manualmente come false (circa 8 mila) sono state raccolte informazioni sul contesto in cui tali notizie sono state diffuse, in seguito ad un processo di pulizia dei dati. Più del 50% delle dichiarazioni sono state fatte in TV, durante interviste, dibattiti e programmi televisivi. Circa il 20% sono state invece scritte su canali social, tra post, commenti e blog online. Tra il 3 ed il 7% si aggirano le percentuali di dichiarazioni fatte via e-mail, scritte su giornali, trasmesse durante delle pubblicità o pronunciate in radio o durante un evento pubblico.
+
+<br><a href="https://paperswithcode.com/dataset/liar">Fonte</a></p>
+    </div>
+  </div>
+</div>
+<!-- Start card 8 -->
+<div class="card">
+  <div class="card-header" id="headingEight">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        Quali sono le parole più frequenti nei titoli delle fake news?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/parole_frequenti_titoli.png" data-lightbox="gallery" data-title="Description for Image 8">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/parole_frequenti_titoli.png" alt="Image 8">
+      </a>
+      <p>
+Con lo scopo di comprendere il crescente fenomeno delle fake news, nel 2016 sono stati estratti i titoli da 13 mila notizie ricavate da 244 siti web, ed etichettati come falsi dall’estensione di Google BS Detector. Tramite l’utilizzo della libreria nltk è stato possibile individuare quali fossero le parole più frequenti all’interno dei titoli, per indagare i meccanismi del clickbait. 
+Andando ad estrarre le 50 parole più frequenti, quelle che sono risultate più presenti erano nomi di persona (Trump, Hillary, Clinton, ecc). Questo è sicuramente dovuto al fatto che nel 2016, anno delle elezioni politiche negli Stati Uniti, quelle persone sono state sicuramente al centro del dibattito quotidiano.
+Escludendo i nomi propri possiamo però individuare parole come e-mail, fbi, news, comment, war, che sono in linea con le tematiche di cui si discute di più durante i dibattiti online. 
+<br><a href="https://www.kaggle.com/datasets/mrisdal/fake-news">Fonte</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header" id="headingNine">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        Quali tweet diventano virali?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/numero_retweet.png" data-lightbox="gallery" data-title="Description for Image 9">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/numero_retweet.png" alt="Image 9">
+      </a>
+      <p>Nel 2021 è stato reso pubblico uno strumento di collezione e analisi di fake news proveniente dai social media. Per il suo sviluppo sono stati utilizzati dei dati riguardanti articoli di news pubblicati su Twitter. Ogni notizia è etichettata come vera o falsa, ed ha un indicatore del numero di volte in cui è stata ritwittata dagli utenti. Rispetto al totale di circa 23 mila notizie, quelle false risultavano essere circa 6 mila, mentre le altre erano tutte vere. E' stata calcolata la percentuale di tweet, sia veri che falsi, che avevano ricevuto un numero di retweet superiore a 500, e che quindi più probabilmente sarebbero diventati virali. Di quelle false, il 70% aveva ottenuto un numero di retweet così elevato, mentre di quelle vere solo il 30%.
+      <br><a href="https://www.kaggle.com/datasets/algord/fake-news">Fonte</a></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header" id="headingTen">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+        In che lingua sono scritti i tweet di fake news?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/ciambella.png" data-lightbox="gallery" data-title="Description for Image 9">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/ciambella.png" alt="Image 9">
+      </a>
+      <p>Con lo scopo di comprendere il crescente fenomeno delle fake news, nel 2016 sono stati estratti i titoli da 13 mila notizie ricavate da 244 siti web, ed etichettati come falsi dall’estensione di Google BS Detector. 
+Ogni notizia era etichettata con la lingua in cui era scritta e con il paese di provenienza. Rispetto ai 13 mila tweet totali, il 95% risultava essere scritto in lingua inglese, e di questi l’85% proveniva dagli Stati Uniti. 
+<br><a href="https://www.kaggle.com/datasets/algord/fake-news">Fonte</a></p>
+</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header" id="heading11">
+    <h5 class="mb-0">
+      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+        Quando le persone si sono interessate al fenomeno delle fake news?
+      </button>
+    </h5>
+  </div>
+  <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#myAccordion">
+    <div class="card-body">
+      <a href="img/linea_del_tempo.png" data-lightbox="gallery" data-title="Description for Image 9">
+        <img class="enlarge-image img-fluid mx-auto d-block" src="img/linea_del_tempo.png" alt="Image 9">
+      </a>
+      <p>Google Trends permette di verificare quali ricerche sono state fatte su Google riguardo ad un certo argmento in un determinato periodo della storia. Cercando il termine "fake news", negli Stati Uniti, tra il 2014 ed il 2023, è stato possibile individuare i periodi in cui il fenomeno ha interessato maggiormente la popolazione. In particolare, durante il periodo di presidenza di Donald Trump è evidente come le ricercha abbiano registrato dei picchi, in corrispondenza dei quali sono evidenziati gli eventi storici più importanti.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+  </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer section-dark">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a>Designed with love in 2023</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="credits ml-auto">
+          Realizzato da:
+          <a href="about.html" target="_blank">Vincenzo Sammartino</a>,
+          <a href="about.html" target="_blank">Lucrezia Labardi</a>,
+          <a href="about.html" target="_blank">Rebecca Guolo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+// Nascondi tutti i pannelli all'apertura della pagina
+      function toggleCollapse(collapseId) {
+        var collapseElement = $('#' + collapseId);
+        var arrowIcon = collapseElement.prev().find('.arrow-icon');
+
+        if (collapseElement.hasClass('show')) {
+          collapseElement.collapse('hide');
+          arrowIcon.html('&darr;');
+        } else {
+          collapseElement.collapse('show');
+          arrowIcon.html('&uarr;');
+        }
+      }
+
+  </script>
+  <script>
+    // Funzione per copiare la descrizione (contenuta in p) in data-title (elemento a)
+    function copiaDescrizioneInDataTitle() {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach((card, index) => {
+        const cardBody = card.querySelector('.card-body');
+        const link = cardBody.querySelector('a');
+
+        // Controlla se la card ha una struttura nidificata
+        if (!link) {
+          const nestedCardBody = cardBody.querySelector('.card-body');
+          if (nestedCardBody) {
+            const paragraph = nestedCardBody.querySelector('p');
+            const nestedLink = nestedCardBody.querySelector('a');
+            if (paragraph && nestedLink) {
+              const description = paragraph.textContent.trim();
+              nestedLink.setAttribute('data-title', description);
+            }
+          }
+        } else {
+          const paragraph = cardBody.querySelector('p');
+          if (paragraph && link) {
+            const description = paragraph.textContent.trim();
+            link.setAttribute('data-title', description);
+          }
+        }
+      });
+    }
+
+    // Esegui la funzione una volta che il DOM è stato caricato
+    document.addEventListener('DOMContentLoaded', function() {
+      copiaDescrizioneInDataTitle();
+    });
+  </script>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Paper Kit 2 JS -->
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/bootstrap.min.js"></script>
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/paper-kit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+
+</html>
+

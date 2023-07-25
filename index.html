@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Journalism Project - Home</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Paper Kit 2 CSS -->
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/paper-kit.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-image-hover@1.0.0/dist/css/bootstrap-image-hover.min.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Custom CSS -->
+  <style>
+        /* Stile per il grafico */
+    .line {
+      fill: none;
+      stroke: #00B4D8; /* Colore celeste di Paper Kit 2 */
+      stroke-width: 2px;
+    }
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+    .area {
+      fill: #1170aa; /* Colore celeste di Paper Kit 2 */
+      opacity: 0.7;
+    }
+    
+    .card-text{
+font-size: 18px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scroll handle */
+  border-radius: 5px; /* Round the corners of the scroll handle */
+}
+    .zoom {
+      cursor: move;
+      fill: none;
+      pointer-events: all;
+    }
+    
+    svg{
+display: block;
+margin: auto;
+}
+
+.navbar{
+ background-color: #324a7f;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken the color of the scroll handle on hover */
+}
+.foto_testo{
+width: 30%;
+display: block;
+margin: 20px auto 20px auto;
+}
+
+  .hovereffect {
+    position: relative;
+    overflow: hidden;
+    
+  }
+
+  .hovereffect img {
+    display: block;
+    width: 30%;
+    height: auto;
+    transition: all 0.4s ease-in-out;
+  }
+  .hovereffect .overlay {
+  width: 33%;
+  margin:auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .hovereffect:hover img {
+    transform: scale(1.1);
+  }
+
+  .hovereffect:hover .overlay {
+    opacity: 1;
+  }
+
+  .hovereffect .caption {
+    color: #fff;
+    font-style: italic;
+  }
+.caption{
+padding: 20px;
+}
+
+b{
+font-weight: bold;
+}
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand text-white" href="index.html">Data Journalism</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dati.html">Dati</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="analisi.html">Analisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="interviste.html">Interviste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Corpo -->
+  <div class="page-header section-dark" style="background-image: url('background.jpg');">
+    <div class="filter"></div>
+    <div class="content-center">
+      <div class="container">
+        <div class="title-brand d-flex justify-content-center">
+          <h1 class="presentation-title">Fake News: un caso di Data Journalism</h1>
+          <div class="fog-low">
+            <img src="https://demos.creative-tim.com/paper-kit-2/assets/img/fog-low.png" alt="">
+          </div>
+          <div class="fog-low right">
+            <img src="https://demos.creative-tim.com/paper-kit-2/assets/img/fog-low.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="moving-clouds" style="background-image: url('https://demos.creative-tim.com/paper-kit-2/assets/img/clouds.png'); "></div>
+  </div>
+  
+  <div class="container text-justify">
+  <div class="">
+    <div class="card-body">
+      <p class="card-text">Chi non ha mai sentito parlare di fake news? Scommettiamo nessuno. Qualche lettore si potrebbe però meravigliare nel venire a sapere che l’espressione “fake news” di per sé è nata neanche un decennio fa, nel 2016.
+<br>Non fraintendiamoci, non stiamo dicendo che il fenomeno non esistesse otto anni fa! 
+<br>Se gli esperti di NLP <a href="interviste.html">Bondielli e Passaro</a> ci informano che gli studi a riguardo sono iniziati solo negli anni ‘50 del secolo scorso, il professor <a href="interviste.html">Lenci</a>, esperto in Linguistica Computazionale, ci ha fatto notare che una delle più antiche fake news - come le chiamiamo oggi - è addirittura datata 30 marzo 315: la Donazione di Costantino era infatti un “documento falso che fu fabbricato per dimostrare che l'imperatore Costantino aveva donato alla Chiesa Cattolica dei beni terreni”, ciò legittimato dal fatto che “la Chiesa aveva un potere temporale e [...] dei possedimenti”. 
+</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="hovereffect">
+        <img class="img-responsive foto_testo" src="img/foto2.jpg" alt="Image 2"style="width: 100%;">
+        <div class="overlay" style="width: 100%;">
+          <p class="caption">Traducibile in italiano come “Bufala mediatica”, secondo il Vocabolario della Crusca deriva dall’espressione “menare per il naso come una bufala”, intendendo l’azione di portare a spasso l’interlocutore trascinandolo come si fa con i buoi e i bufali per l'anello attaccato al naso.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+    <p class="card-text mt-4">
+    <br>
+    Treccani ne dà una definizione: “informazione in parte o del tutto non corrispondente al vero, divulgata intenzionalmente o inintenzionalmente attraverso il Web, i media o le tecnologie digitali di comunicazione, e caratterizzata da un’apparente plausibilità, quest’ultima alimentata da un sistema distorto di aspettative dell’opinione pubblica e da un’amplificazione dei pregiudizi che ne sono alla base, ciò che ne agevola la condivisione e la diffusione pur in assenza di una verifica delle fonti.”
+    </p>
+</div>
+  </div>
+</div>
+    
+    
+    
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+    <p class="card-text mt-4" >
+    <br>
+    Se si vuole però essere davvero precisi, come preannunciato, l’espressione “fake news” nasce nel 2016 in concomitanza con le elezioni che hanno visto contrapporsi Donald Trump e Hillary Clinton. A tal proposito, il professor <a href="interviste.html">Passaglia</a>, esperto in diritto, ci informa che in quell’occasione “i giornalisti dicevano una serie di cose totalmente vere nei confronti di Trump ma questo rispondeva ‘fake news’, ossia notizia spazzatura, notizia falsa. Da lì è iniziato l’utilizzo massiccio del termine”. </p>
+    </div>
+    <div class="col-md-6">
+            <img class="img-responsive foto_testo" src="background.jpg" alt="Image 2"style="width: 100%;">
+    </div>
+  </div>
+</div>
+    <p class="card-text">
+Trump, elezioni politiche e Stati Uniti sono proprio le parole chiave che faranno da filone in questo articolo di Data Journalism: sono stati analizzati dei <a href="dati.html">dataset</a> di fake news prodotte nel periodo in cui gli Stati Uniti furono governati da Trump e dopo opportune operazioni di data cleaning, analisi linguistiche e raggruppamento in categorie sono stati realizzati dei grafici [rimando sezione analisi] con l’intento di rispondere a delle domande riguardanti il tema. 
+Parallelamente, <a href="interviste.html">queste domande sono state poste anche a esperti</a> in ambiti diversi come NLP - Natural Language Processing, Linguistica Computazionale e Diritto. 
+Lo scopo finale è proprio quello di far raccontare ai dati le fake news durante il periodo elettorale negli Stati Uniti, confrontandoli poi con il parere di questi esperti. 
+    </p>
+    
+    <br>
+
+<br>
+        <p class="card-text">
+Oltre ad essere la culla delle fake news, abbiamo deciso di concentrarci sul <b>territorio</b> americano in seguito alle analisi da noi svolte su un gran numero di tweet contenenti bufale mediatiche scritte in <b>lingue</b> diverse e in paesi diversi;  abbiamo infatti constatato che la maggior parte di queste sono scritte in lingua inglese e che sono state prodotte maggiormente negli Stati Uniti.
+    </p>
+    <img class="foto_testo" src="img/ciambella.png" alt="Image 4" style="width:60%;">
+        <p class="card-text">
+<br>Questo dato è fondamentale anche alla luce delle affermazioni del professor Passaglia, il quale ha affermato che in un contesto così transnazionale come il nostro, la diffusione di fake news provenienti dagli Stati Uniti è pericolosa, in quanto oltreoceano si può dire ciò che si vuole senza limiti, mentre in Europa sono imposte delle limitazioni. 
+<br>Inoltre, non si deve dimenticare che la lingua inglese è quella più utilizzata per la comunicazione internazionale e quindi è quella in grado di raggiungere il maggior numero di persone possibili. 
+
+    </p>
+     <p class="card-text">
+Stabilito questo background, si pensi a Liam, un qualsiasi cittadino americano, a come abbia affrontato il periodo di campagna elettorale e di presidenza di Trump. 
+<br>Innanzitutto, <b>Liam</b> prima del 2016 non sapeva cosa fosse una fake news, tant’è che dopo aver sentito questo termine numerose volte, decide di cercarlo su Google, e come lui, lo stesso fanno numerosi cittadini americani. 
+<br>Se si analizza il numero di volte in cui “fake news” è stato ricercato, impostando su Google Trend la nazione di Liam come area di ricerca, si realizza che non era lui ignorante ma che aveva ragione il professor Passaglia, in quanto il termine “fake news” nacque solo alla fine del <b>2016</b>.    </p>
+   <img class="foto_testo" src="img/linea_del_tempo.png" alt="Image 4" style="width:60%;">
+   
+        <p class="card-text">
+Non è un caso che la maggior parte delle volte in cui gli americani hanno ricercato questo termine coincida proprio con il periodo di presidenza di Trump; tutti i picchi si sono verificati proprio tra il 2017 e il 2021. Il primo, che è anche il più alto, viene datato febbraio 2017 ossia quando Obama ha ceduto i propri poteri a Trump, appunto. Pochi mesi dopo la sua elezione, nel giugno 2017, Trump ha ritirato gli Stati Uniti dall’accordo di Parigi sul clima. Durante il periodo in cui si registra l’ultimo picco, all’inizio dell’anno seguente, si è tenuto il 115° Congresso degli Stati Uniti d’America. 
+<br>Nonostante sia un picco più basso rispetto ai precedenti, Trump ha diffuso delle verità false anche ad aprile 2020, periodo in cui gli Stati Uniti iniziarono a registrare numerosi casi di Covid-19 e a tal proposito egli propose l’utilizzo di disinfettanti per via orale per combattere il virus. 
+<br>Per un anno intero quindi, Liam si è ritrovato bombardato continuamente da fake news riguardanti questi avvenimenti e con estrema facilità, almeno una volta, avrà creduto a un qualcosa che si è poi rivelato falso. Ovviamente, anche gli anni seguenti sono caratterizzati da bufale mediatiche, seppur con quantità minori. Liam ha potuto tirare un respiro di sollievo - che non vuol dire aver abbassato la guardia - solo dopo il 2021, dopo la fine della carica di Trump appunto. 
+</p>
+
+        <p class="card-text">
+        <br>Sin da subito Liam ha capito che le fake news non sono confinate a precisi ambiti, ma che possono diffondersi in qualsiasi settore. Infatti, si riscontrano in ambiti che, in determinate contingenze, sono più esposti rispetto ad altri (Passaglia). Ecco perchè Liam si è ben guardato dal bere del disinfettante: nell’aprile 2020 il settore più esposto era sicuramente quello della sanità, pertanto avrà avuto un occhio di riguardo circa tutte le news che leggeva riguardanti il coronavirus. 
+</p>
+
+
+
+    <img class="foto_testo" src="img/ambiti.png" alt="Image 4" style="width: 60%;">
+    
+         <p class="card-text">
+Ciò nonostante, non ci sono dubbi sul fatto che la <b>politica</b> è uno degli ambiti in cui si propagano maggiormente le fake news, seconda solo al settore economico. 
+<br>Avendo vissuto il governo di Trump, Liam non è sorpreso da questo dato; al contrario, è più stupito dal primo classificato. Tuttavia, il professor Lenci aveva dichiarato che gli ambiti in cui maggiormente si diffondono le bufale mediatiche sono quelli a base <b>commerciale</b>. In effetti, Bondielli e Passaro sottolineano che le fake news possono esercitare una grande influenza su aziende e privati, determinando la loro scelta di fare, o meno, investimenti. Inoltre, le fake news attraggono, e cosa c’è di meglio che far cadere Liam in una verità falsa così da alimentare il mercato? Immedesimandoci in lui, qualsiasi cosa sarebbe meglio che farsi truffare, ma all’economia non interessa del singolo. 
+<br>Contrapponendo l’occupante dei primi posti con quello dell’ultimo, è facile rendersi conto che le fake news raramente si diffondono per concetti più spirituali: la <b>religione</b> non porta lucro, quindi perché cercare di ingannare Liam diffondendo bugie riguardo a un dio piuttosto che un altro?
+   </p>
+    
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <img class="img-responsive foto_testo" src="img/foto5.png" alt="Image 2"style="width: 100%;">
+    </div>
+    <div class="col-md-6">
+    <p class="card-text mt-4">
+    A Trump invece interessa di Liam: nell’ambito politico si creano e diffondono numerose fake news in quanto hanno un impatto diretto sull’esito delle votazioni delle elezioni. Proprio dopo aver avuto riprova di ciò con le elezioni di Trump e in seguito alla Brexit, il professor Passaglia ci ha messo a conoscenza del fatto che la Francia ha escogitato una legge contro la disinformazione con il fine di avere campagne elettorali non “inquinate”. </p>
+</div>
+  </div>
+</div>
+    
+    <br>
+    <br>
+         <p class="card-text">
+         Come faceva però Trump a convincere Liam a votarlo?
+<br>I canali che ha utilizzato sono diversi:
+   </p>
+    <div class='tableauPlaceholder' id='viz1690211920685' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contesti_interattivi_v4&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='contesti_interattivi_v4&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;contesti_interattivi_v4&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it-IT' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1690211920685');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>             
+             <br>
+             <p class="card-text">
+             Qui le affermazioni degli esperti non concordano con i dati, in quanto nessuno di loro ha nominato la <b>televisione</b> come canale di diffusione; al contrario, i dati la vedono come quello principale. 
+<br>C’è forse bisogno di capire cosa effettivamente comprende questo mezzo di comunicazione: Trump non utilizzava solo i social (Twitter più di altri) per far diventare virali le sue fake news, ma spesso le faceva circolare in occasione di dibattiti e interviste (la fake news del disinfettante contro il covid-19 ne è l’esempio) che poi venivano trasmessi e ripresi dai vari programmi televisivi e notiziari.  
+<br>Ciò nonostante, è proprio su <b>Twitter</b> che Liam si è dovuto scontrare contro una fake news che ha avuto gravi conseguenze.  
+   </p>
+   
+       <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <img class="img-responsive foto_testo" src="img/foto10.png" alt="Image 2"style="width: 80%;">
+    </div>
+    <div class="col-md-6">
+    <p class="card-text mt-4">
+     3 novembre, 2020. Liam è chiamato, insieme a tutti gli altri cittadini americani, a votare per scegliere chi governerà il suo paese. Al di là del pensiero politico di Liam, gli Stati Uniti videro vincere il partito democratico, spodestando quindi il partito repubblicano di Trump. Quest’ultimo però non ci sta e si rifiuta di riconoscere l’esito delle votazioni, sostenendo la presenza di brogli, tanto da scrivere su Twitter “He won because the Election was Rigged”.
+     Liam non sa cosa fare: non sarebbe giusto far governare qualcuno che non ha vinto lealmente, ma allo stesso tempo si domanda chi gli può assicurare che Trump non stia mentendo solo perché non vuole cedere lo scettro del potere? Non sa decidersi.
+<br>Nel frattempo però, proprio per questa mancanza di certezze, scoppia una vera e propria rivolta: se inizialmente doveva essere una protesta pacifica, rapidamente si trasforma con quello che oggi viene conosciuto come “Assalto al Campidoglio degli Stati Uniti”, caratterizzato da violenza e da ordigni esplosivi. 
+<br>Liam, terrorizzato, si rende effettivamente conto di quanto un semplice tweet divulgatore di una fake news possa implicare instabilità sociale, fino a mettere a rischio la sua stessa salute.
+
+     </p>
+</div>
+  </div>
+</div>
+   
+            <p class="card-text">
+            Disinstallare Twitter? Il grafico gli dice che non eliminerebbe il problema visto che addirittura la <b>radio</b> è portatrice di bufale mediatiche. Ovviamente meno, ma non è difficile capirne il motivo: Liam sa che ormai è obsoleto come mezzo di comunicazione, quindi perché cercare di ingannare le persone per raggiungere un determinato fine se possono caderci troppe poche persone?
+<br>E se si affidasse ai <b>giornali</b>? In quel canale, come dice Passaglia, ciò che viene pubblicato deve passare sotto il controllo non solo dell’autore, ma anche dall’editore e dal direttore del giornale stesso. Potrebbe fidarsi quindi, ma allora perché ricopre la terza posizione nel grafico? 
+   </p>
+   
+   <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="hovereffect">
+        <img class="img-responsive foto_testo" src="img/foto6.png" alt="Image 2"style="width: 60%;">
+        <div class="overlay" style="width: 66%;">
+          <p class="caption">Lenci non ha dubbi: il <b>clickbait</b> ne è la causa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+    <p class="card-text mt-4">
+    <br>
+    I giornali vogliono vendere e per farlo devono riuscire ad essere visibili; è proprio questo che li porta a riprendere le notizie che spopolano su altri canali, senza però controllarne prima la veridicità.    </p>
+</div>
+  </div>
+</div>
+
+   
+   
+               <p class="card-text">
+               Nel <b>titolo</b> quindi, devono apparire le parole che catturano maggiormente l’attenzione del lettore, riassumendo allo stesso tempo il contenuto della fake news. 
+E se Liam sapesse quali sono le parole che più frequentemente può trovare nei titoli delle fake news, riuscirebbe a salvaguardarsene? 
+   </p>
+   
+   
+   <img class="foto_testo" src="img/parole_frequenti_titoli.png" alt="Image 4" style="width: 60%;">
+   
+               <p class="card-text">
+               
+               Liam se lo aspettava che il nome di Trump rappresentasse la parola più frequentemente legata alle fake news; subito dopo segue il nome di Hilary Clinton, collegabile al fatto che durante le elezioni del 2016 si è dovuta scontrare contro il re delle bufale mediatiche americane. Non passa inosservato neanche il nome di Obama che, come precedentemente accennato, nel febbraio 2017 gli ha ceduto il governo. 
+<br>Insomma, <b>Trump</b> è il comune denominatore; anche trascurando i nomi di persona, tutto riporta a lui: il primo posto è occupato da “election”, ma comunque le più frequenti non si discostano dall’ambito, infatti si nota “president”, “campaign”, “voter”, “2016”, “vote America”.
+<br>Liam però è un americano attento e nota che anche “Russia” appare spesso: il professor Passaglia infatti afferma che è stato dimostrato che “dietro alle elezioni che hanno favorito Trump ci sia stata la Russia di Putin”. 
+<br>A fronte di ciò, Liam capisce che tutto ciò che riguarda l’ormai ex presidente è spesso potenziale fonte di fake news. 
+<br>Si accorge però anche della parola “<b>video</b>”, che non riesce a collegare al re delle bufale. Contrariamente, Lenci parla di questa nuova frontiera del fake, ossia della capacità che hanno i modelli generativi di creare immagini - e quindi video; la definisce una frontiera “pericolosa” in quanto non è un segreto quanto possano essere impattanti le immagini. 
+   </p>
+   
+      <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="hovereffect">
+        <img class="img-responsive foto_testo" src="img/trump.png" alt="Image 2"style="width: 40%;">
+        <div class="overlay" style="width: 44%;">
+          <p class="caption">Finalmente Liam capisce: <a href="https://www.ansa.it/sito/notizie/mondo/2023/03/23/trump-arrestato-ma-sono-foto-fake-di-una-intelligenza-artificiale_4ec43642-cda5-4121-88dc-a83ac0a0d2c6.html">Trump non è mai stato arrestato</a>, si era “solo” fatto ingannare dall’intelligenza artificiale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+   <br>
+               <p class="card-text">
+               Ovviamente Liam non si sente in colpa, non è lui che crea e alimenta la diffusione di fake news, lui si sente vittima. Siamo sicuri sia davvero così?
+<br>Forse inconsapevolmente, ma è altamente probabile che Liam stesso abbia condiviso una qualche bufala mediatica.
+
+   </p>
+   
+   
+   <img class="foto_testo" src="img/numero_retweet.png" alt="Image 4" style="width: 50%;">
+    
+                  <p class="card-text">
+                  I dati mostrano infatti che è probabile che una notizia vera venga <b>ritwittata</b> solo per il 30% delle occasioni dalle 500 alle 30mila volte; al contrario, una notizia fake può diventare virale con una probabilità del 70%. Il dato è ancora più significativo se si pensa che il dataset di riferimento comprendeva più notizie vere che false: nonostante la presenza maggiore di notizie vere, gli utenti hanno ritwittato più volte notizie fake.
+<br>La situazione si può quindi definire allarmante; pertanto, sorge naturale domandarsi quale sia la <b>consapevolezza</b> di Liam, così come di tutti gli americani, per quanto riguarda il tema fake news.
+<br>E ora ci riferiamo direttamente a te che stai leggendo: visti i numeri riguardanti la condivisione delle fake news, credi che ciò sia dovuto al fatto che solo pochi siano in grado di riconoscere o meno una fake news?
+<br>Noi sicuramente non credevamo fosse un’azione volontaria, ma ci siamo dovuti ricredere quando abbiamo analizzato i dati di un questionario al quale hanno risposto degli studenti americani.
+
+</p>
+    <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <img class="img-responsive foto_testo" src="img/domanda2.png" alt="Image 2"style="width: 100%;">
+    </div>
+    <div class="col-md-6">
+        <img class="img-responsive foto_testo" src="img/domanda3.png" alt="Image 2"style="width: 100%;">
+    </div></div>
+  </div>
+</div>
+
+
+                  <p class="card-text">
+                  Se prima è stato utilizzato l’aggettivo ‘allarmante’, dopo questi dati si può facilmente trasformare in ‘inquietante’: la maggioranza degli americani, probabilmente Liam compreso, afferma di aver sentito parlare di fake news e di saperle individuare; ciò nonostante le ignora. Poche azioni vengono prese nei confronti di queste potenziali fonti di pericolo: solo il 31% cerca di smascherarle.
+<br>Questo atteggiamento a dir poco spiazzante ha delle motivazioni secondo Bondielli e Passaro: come Liam, molti condividono fake news inconsapevolmente, soprattutto nel caso di breaking news siccome è un contesto “in cui è difficile verificare in
+<br>tempo reale la fonte e la veridicità della notizia”. Un altro motivo può essere la pigrizia: perché Liam dovrebbe svolgere delle ricerche quando può semplicemente fidarsi dell’apparenza o della sua convinzione personale? 
+
+</p>
+
+<br>
+<br>
+
+
+                  <p class="card-text">
+                  
+                  Liam non è stato altro che il capro espiatorio di questa storia: chiunque potrebbe essere Liam. A chiunque infatti potrebbe capitare di accendere la televisione e di credere a notizie che sembrano assurde, diventandone addirittura vittima. Chiunque potrebbe essere influenzato negativamente in concomitanza di elezioni politiche: quel politico che tanto ci piaceva potrebbe improvvisamente apparire ai nostri occhi come un truffatore, solo perché il suo avversario ha diffuso una fake news sul suo conto. 
+<br>Chi vorrebbe ritrovarsi nella situazione pericolosa che hanno vissuto gli americani al Campidoglio degli Stati Uniti? Di nuovo, scommettiamo nessuno. 
+<br>Cosa fare allora? Affidarsi ai poteri pubblici potrebbe essere una buona idea? Passaglia per esempio suggerisce che questi debbano trovare delle “forme di generalizzazione di una competenza informatica e culturale sufficiente all’individuo medio per capire che si tratta di un’idiozia”; suggerisce quindi quello che Bondielli e Passaro definiscono come “alfabetizzazione mediatica”. Secondo loro, inoltre, non dovrebbe mancare neanche un’azione normativa che preveda più leggi e più regolamenti - rimanendo sull’onda della legge francese contro la disinformazione nominata da Passaglia. 
+<br>Tutto ciò ci dà anche la consapevolezza che, nonostante si siano evoluti enormemente gli algoritmi di Machine Learning e Intelligenza Artificiale in grado di riconoscere le fake news in maniera automatica, questi dovranno sempre essere coordinati da un’analisi critica da parte di chi riscontra una bufala mediatica.
+<br>Ma dopo che Liam è stato opportunamente istruito, è pronto a non essere più vittima delle fake news? Lenci consiglia il fact-checking, suggerendogli cioè di verificare ciò che legge, incrociandolo con altre informazioni e con il flusso di dati in generale. 
+<br>E se lo fa Liam, perché non lo dovremmo fare anche noi? Se davvero vogliamo evitare di trovarci in pericolo, stiamo sempre attenti a ciò che viene detto in televisione o sui social, soprattutto se si tratta di politica, e non solo se viviamo negli Stati Uniti. 
+
+</p>
+
+<br>
+<br>
+<br>
+    
+   
+    </div>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer section-dark">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a>Designed with love in 2023</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="credits ml-auto">
+          Realizzato da:
+          <a href="about.html" target="_blank">Vincenzo Sammartino</a>,
+          <a href="about.html" target="_blank">Lucrezia Labardi</a>,
+          <a href="about.html" target="_blank">Rebecca Guolo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-3dZ9wIrMMij8rOH7X3kLfXAzwtcHpuYpEgQg1OA4QAob1e81H8ntUQmQm3pBudqIoySO5j0tHN4ENzA6+n2r4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Paper Kit 2 JS -->
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/bootstrap.min.js"></script>
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/paper-kit.min.js"></script>
+</body>
+
+</html>

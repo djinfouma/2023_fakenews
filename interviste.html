@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Journalism Project - Interviste</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Paper Kit 2 CSS -->
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/paper-kit.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <style>
+    /* Add any custom styles here */
+    .card-header .btn-link.collapsed::after {
+      content: "\f078";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .card-header .btn-link::after {
+      content: "\f077";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    .navbar{
+ background-color: #324a7f;
+}
+
+    .card {
+      width: 90%;
+      margin: 0 auto;
+    }
+    b{
+    font-weight: bold;
+    }
+    .profile-image {
+  width: 180px; /* Adjust the width as needed */
+  height: 180px; /* Adjust the height as needed */
+}
+
+/* This will affect the entire document */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scroll handle */
+  border-radius: 5px; /* Round the corners of the scroll handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken the color of the scroll handle on hover */
+}
+
+  </style>
+</head>
+
+<body class="about-us">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand text-white" href="index.html">Data Journalism</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dati.html">Dati</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="analisi.html">Analisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="interviste.html">Interviste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Body -->
+  <div class="wrapper">
+    <div class="page-header page-header-small section-image" style="background-image: url('img/interviste.jpg');">
+      <div class="content-center">
+        <div class="container text-white">
+          <h1>Interviste</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accordion -->
+<div id="accordion">
+  <!-- Repeat this card structure for each interview -->
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link d-inline" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Alessandro Lenci
+        </button>
+        <h6 class="card-subtitle text-muted d-inline ml-4">Esperto di Linguistica Computazionale</h6>
+        <button type="button" class="close d-inline" aria-label="Close" onclick="toggleCollapse('collapseOne')">
+          <span class="arrow-icon" aria-hidden="true"></span>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body d-flex">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="rounded-circle profile-image" src="lenci.jpg" alt="Expert Image" style="max-width: 100%;">
+          </div>
+          <div class="col-md-10 text-justify">
+            <p><ol>
+  <li><b>Qual è la definizione che lei darebbe oggi al termine fake news?</b><br>
+Fake news è un termine nuovo per un fenomeno antico. É un pezzo di informazione, sia un post su Twitter, su Facebook, un articolo di giornale o altro, che volutamente produce una notizia falsa con l'intenzione di farla sembrare vera e quindi creare della disinformazione. Nella fake news c’è un’intenzionale volontà da parte di chi la produce di ingannare qualcuno. É una bugia, una balla per usare un termine molto poco scientifico. Dire una fake news implica mentire volutamente con l'idea di ingannare qualcuno. 
+Nell’ambito del NLP (Natural Language Processing) c’è una distinzione fra fake news, rumors e leggende metropolitane: questi ultimi due sono generati e propagati con intenzioni varie e non con l’intento di disinformare qualcuno. Un esempio di rumor può essere che una qualche celebrità si sta divorziando. All’origine di un rumor ci può essere una fake news, ma dovuta al fatto che qualcuno ha semplicemente travisato. Al contrario, alla base di una fake news c’è un intento malevolo fin dall’inizio di voler creare un contenuto falso per qualche scopo non positivo.
+</li>
+  <li><b>Si può quindi dedurre che secondo lei la motivazione principale che porta una persona a creare e diffondere una fake news è quella di mentire con un fine malevolo? Ci sono altre motivazioni? </b><br>
+Una fake news si crea e si diffonde per la stessa ragione per cui si mente. Perché si mente? Per raggiungere un interesse personale che altrimenti si crede che la verità precluda; questo interesse può essere danneggiare qualcuno - cosa peggiore - ma anche acquisire visibilità, che è il caso perfetto dei social media: si inventa una fake semplicemente perché è qualcosa che darà dei like e permetterà di essere visibile. Tuttavia, quando si produce un qualcosa che può avere degli effetti negativi magari non lo si fa per danneggiare qualcuno o per offendere. Ad esempio “Oggi è stato visto un orso passare per Pisa” è una news che non danneggia nessuno, ma è una notizia talmente strana che magari, accompagnata da un’immagine anch’essa fake, può aumentare il numero di like. </li>
+  <li><b>Qual è il fragile rapporto che esiste tra fake news e libertà di espressione, soprattutto nei social media?</b><br>
+La libertà di espressione non è libertà di dire falsità, e soprattutto di dirle con l’intenzione di ingannare. Si pensi a coloro che credono che la terra sia piatta: la loro opinione può essere considerata legittima. Diverso è però se si diffonde una notizia che degli scienziati stanno dimostrando che la terra è piatta e questo è falso: è una fake. Quindi la libertà d’espressione è legittima, ma in maniera automatica può risultare difficile da discriminare perché anche delle news vere possono apparire assurde.
+</li>
+  <li><b>Ha già nominato alcuni canali di diffusione delle fake news, come i giornali e i social media. Crede ce ne siano altri? Considera Twitter il principale?  </b><br>
+Ci sono naturalmente canali che sono più a rischio come i canali telegram, quelli legati alla propaganda, il Deep Web e Facebook. In pratica, i canali di diffusione più rischiosi sono quelli meno controllati. Il problema è che oggi c’è una tale interazione tra tutti i media, per cui i giornali riprendono le news dai social senza però controllarne la veridicità. La fake news più pericolosa è quella che è falsa ma sembra vera, quella che non è assurda. Le email di spam più pericolose non solo quelle con errori ortografici, bensì quelle che richiedono un fact-checking. Lo stesso accade con le fake news. I canali sono così rapidi, poco controllabili, che danno una maggiore diffusione, diventando quindi pericolosi. </li>
+  <li><b>La propaganda è quindi secondo lei uno degli ambiti principali nella quale si diffondono le fake news. Quali altri ambiti sono colmi di questo fenomeno?</b><br>
+Molti sono legati su base commerciale, in quanto le fake news spesso attraggono attenzione e quindi si collegano al clickbait. La propaganda è sicuramente un ambito in cui serpeggiano fake news, inteso come propaganda politica e delle guerre. In realtà anche la pubblicità può diventare fake news: quelle in cui si dichiara di perdere peso con una specifica dieta possono essere considerate fake news in quanto non sono corroborate da una sostanziale veridicità di ciò che viene detto. Quindi anche la pubblicità è fake, soprattutto quella di basso livello. </li>
+  <li><b>Inizialmente lei aveva definito le fake news come un termine nuovo per descrivere un fenomeno antico. Può quindi affermare che le fake news non siano nate con internet ma che esistevano già prima? </b> <br>
+Ovviamente no, le fake news non sono nate con Internet. Basti pensare a tutta la propaganda e disinformazione che i russi chiamavano “dezinformatsiya”, che era una strategia di controinformazione, di circolazione di news false per scopi propagandistici. Basti anche prendere i giornali americani durante la Guerra del Vietnam o la Seconda Guerra Mondiale. 
+Anche i latini facevano fake news e la Donazione di Costantino ne è l’esempio, ossia un documento falso che fu fabbricato per dimostrare che l'imperatore Costantino aveva donato alla Chiesa Cattolica dei beni terreni e come legittimazione del fatto che la Chiesa aveva un potere temporale e aveva dei possedimenti. Un altro esempio è il famoso saggio sui protocolli dei 7 Savi di Sion: era un livello antisemita creato dalla polizia zarista all'inizio del secolo per giustificare l'antisemitismo e i pogrom dalla polizia zarista in cui si presentava l'idea che i savi di sion fosse una sorta di setta ebraica, la quale aveva creato un documento che era una sorta di programma per conquistare e dominare il mondo; è stata una fake talmente pericolosa che ha giustificato e fomentato una buona parte dell’antisemitismo dall’inizio del secolo in poi fino ad arrivare all’olocausto. Il problema oggi è che la quantità fa la differenza: il tasso di facilità con cui oggi si creano fake news e il tasso di rapidità con cui vengono diffuse, fa una differenza nell'impatto. Quindi, in questo senso internet non le ha create, ma le ha trasformate, amplificate. 
+</li>
+  <li><b>Proprio per evitare conseguenze pericolose, come ci ha appena citato, quali sono le tecniche che oggi vengono utilizzate per individuare e classificare una news come fake? </b><br>
+Dipende dalle fake. Molte delle tecniche automatiche che hanno delle performance più alte sono quelle che si basano su degli aspetti linguistici abbastanza superficiali del testo che possono evidenziare per esempio l’uso di enfasi, l’uso di certi termini e così via. I sistemi hanno un buon tasso di riconoscimento ma ancora non a livelli umani; spesso anche per gli umani è ancora complicato discriminarle perché c’è bisogno di un contesto. Uno strumento così potente come Chat-gpt rappresenta un un pericolo per la creazione di fake news in quanto i testi che oggigiorno questi modelli producono sono così simili a testi scritti da umani, che è molto difficile che una macchina, così come un umano, sappia distinguerli; è molto difficile discriminare un testo artificiale da uno che non lo è, e quindi è difficile riconoscerli con questi sistemi. 
+Questi modelli creano loro stessi delle fake news involontariamente: le famose allucinazioni semantiche sono delle fake news involontarie. Quindi oggi il problema è che si hanno dei modelli così sofisticati nel minare il linguaggio nelle sue strutture che per riconoscere la fake si devono fare cose molto più semantiche: spesso le fake news vengono da fonti non controllate, quindi bisognerebbe controllare la fonte, le fake news possono essere assurde (es. Papa che dice qualcosa di positivo sulla guerra). 
+Per capire che in una news c’è un qualcosa di estremamente contradditorio, si deve avere una base di conoscenza di altre informazioni verificate, ed è quello che viene chiamato fact-checking, ossia avere dei modelli che permettono di verificare se quello che viene detto è tutto falso o potenzialmente vero. 
+Detto questo, come fanno poi le grandi companies come Facebook, Twitter o altro a cercare di filtrare le fake? Tuttora con gli umani: ci sono annotatori che cercano di identificarle. 
+Poi c'è tutto il tema altrettanto affascinante delle fake delle immagini con i modelli generativi e, per tornare al Papa, era venuta fuori un'immagine di lui che indossava il Montcler o ancora l’immagine di Trump che veniva arrestato. É una nuova frontiera importante e pericolosa perché si sa che impatto hanno le immagini, quindi non è banale capire se sono generate artificialmente oppure no. 
+</li>
+  <li><b>Quindi lei propone il fact-checking come una delle soluzioni migliori per riuscire a evitare di credere alle fake news?? </b><br>
+Il fact-checking è uno dei passaggi e con fact-checking si intende il basarsi su informazioni verificate, incrociando altre informazioni e il flusso dei dati. </li>
+</ol>
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link d-inline" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Alessandro Bondielli e Lucia Passaro con l'intervento di Francesco Marcelloni
+        </button>
+        <h6 class="card-subtitle text-muted d-inline ml-4">Esperti di NLP</h6>
+        <button type="button" class="close d-inline" aria-label="Close" onclick="toggleCollapse('collapseTwo')">
+          <span class="arrow-icon" aria-hidden="true"></span>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body d-flex">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="rounded-circle profile-image" src="bondielli.jpg" alt="Expert Image" style="max-width: 100%;">
+            <img class="rounded-circle profile-image mt-2" src="passaro.jpg" alt="Expert Image" style="max-width: 100%;">
+          </div>
+          <div class="col-md-10 text-justify">
+            <p>
+            <ol>
+  <li><b>Qual è la definizione di fake news?</b><br>
+
+L’espressione “fake news” è diventata lo standard di fatto per definire
+informazioni false nei media tradizionali e digitali, in particolare sul web. Fake
+news è quindi diventato una sorta di termine ombrello, anche se la letteratura
+scientifica non è del tutto concorde sulla sua definizione. Esistono infatti
+diverse definizioni che si concentrano su specifici aspetti delle notizie false.
+Rielaborando diverse definizioni presenti in letteratura, potremmo considerare
+una fake news come “una notizia che sia intenzionalmente falsa e verificabile
+in quanto tale”. I due aspetti chiave in questo caso sono l’intenzione di creare
+una notizia falsa ma apparentemente vera, e la verificabilità della notizia
+come falsa. In questa definizione, viene dato meno rilievo al canale di
+comunicazione (e.g., post sui social vs articolo), sebbene anch’esso giochi un
+ruolo importante nella diffusione.</li>
+  <li><b>Quali sono gli ambiti che colpiscono principalmente le fake news?</b><br>
+Le fake news si diffondono in diversi ambiti quali la Politica, dove possono
+influenzare le elezioni e/o manipolare l'opinione pubblica danneggiando per
+esempio la reputazione di politici o partiti. Un tema correlato a quello delle
+fake news è infatti quello della propaganda.
+Altri ambiti di diffusione particolarmente rilevanti riguardano la Salute, dove le
+fake news possono riguardare cure non supportate da evidenze scientifiche o
+rischi legati alle vaccinazioni; l’Ambiente, per esempio con notizie che mirano
+a minimizzare l'impatto del cambiamento climatico; la Tecnologia, con notizie
+riguardanti finte scoperte o invenzioni rivoluzionarie, teorie del complotto sulla
+tecnologia e sui dispositivi tecnologici e così via. Infine, sono molto rilevanti le
+fake news che emergono intorno a specifici eventi di attualità, dove si
+diffondono sfruttando confusione e incertezza.
+In generale, fake news e disinformazione possono manifestarsi in tutti gli
+ambiti nei quali esiste disclosure (i.e., se ne parla su vari canali comunicativi).</li>
+  <li><b>Quali sono le principali motivazioni che portano alla creazione e
+propagazione delle fake news?</b><br>
+Le principali motivazioni che portano alla creazione e propagazione delle fake
+news includono la volontà di manipolare l'opinione pubblica per raggiungere
+obiettivi politici, ideologici, o finanziari, generare confusione e
+destabilizzazione, danneggiare la reputazione di soggetti pubblici (individui o
+organizzazioni), e persino per “gioco”.
+La diffusione delle fake news è facilitata dalla velocità e dall'ampia portata dei
+social media, che rendono più facile condividere contenuti senza verificarne la
+veridicità. Inoltre, anche la mancanza di alfabetizzazione mediatica e la
+tendenza delle persone a confermare le proprie convinzioni preesistenti
+possono contribuire alla diffusione delle fake news. Questo ultimo aspetto è
+anch’esso amplificato dai social media e dai sistemi di raccomandazione di
+cui dispongono che, alla lunga, creano delle vere e proprie echo chamber
+(camere di risonanza), ovvero degli ecosistemi isolati da confutazioni, nei
+quali i partecipanti sono esposti solo a tesi che rafforzano le loro convinzioni.
+</li>
+  <li><b> Le fake news sono nate con internet o esistevano già prima?
+</b><br>
+Le fake news esistono da molto prima dell’avvento di internet. Vi sono infatti
+alcune evidenze di notizie false anche in iscrizioni latine di epoca romana. I
+primi studi scientifici sulle fake news risalgono alla fine degli anni ‘50. Le fake
+news e i rumors si sono sempre diffusi soprattutto per via orale o attraverso
+canali di informazione secondari rispetto ai media tradizionali. Con l’avvento
+di internet, e in particolare dei social media, che al giorno d’oggi giocano un
+ruolo fondamentale nella diffusione di informazione, la creazione e soprattutto
+la diffusione di fake news è cresciuta esponenzialmente rispetto agli anni
+precedenti.</li>
+  <li><b> Quali sono i principali canali di propagazione di fake news? Twitter può
+essere considerato il primo canale di diffusione?</b><br>
+I principali canali di diffusione delle fake news possono variare a seconda
+dell’ambito e dell’area geografica. Tuttavia, è accreditata l’ipotesi che i
+principali canali di diffusione delle fake news siano i social media, incluse le
+piattaforme di messaggistica istantanea. I meccanismi di content sharing da
+un lato favoriscono una diffusione a bassissimo costo e poco controllata del
+contenuto, dall’altro tendono a favorire la propagazione di contenuti che
+provochino una reazione emotiva forte in chi li visualizza (i.e., i contenuti
+cosiddetti “virali”). Le fake news fanno spesso leva proprio sul suscitare
+questo tipo di reazione, rendendo quindi i social media un terreno
+estremamente fertile. Inoltre, chi diffonde fake news con l’intento di
+disinformare, può farlo sui social network attraverso l’uso di bot, ovvero
+software automatizzati che svolgono azioni predefinite, simulate come azioni
+umane, come inviare messaggi, rispondere a commenti o pubblicare
+contenuti, tra i quali appunto le fake news. Questo viene fatto in particolar
+modo per far apparire una notizia come condivisa da molti utenti, e quindi
+potenzialmente virale.
+</li>
+<li><b> Ci sono stati dei periodi dove le fake news si diffondevano
+maggiormente rispetto ad altri? In caso positivo, che tipologia di
+argomento riguardavano? </b> <br>
+In generale, i periodi di forte incertezza sociale e/o politica sono quelli più a
+rischio di diffusione delle fake news. In tempi recenti, possiamo ricordare le
+elezioni politiche americane del 2016, momento in cui di fatto le fake news
+sono entrate a far parte del linguaggio collettivo, la pandemia causata dal
+Coronavirus Covid-19 e ancor più di recente la guerra russo-ucraina. Gli
+argomenti trattati spesso tendono a ripetersi. Per esempio, teorie del
+complotto, screditamento di figure pubbliche, rischi per la salute legati alla
+medicina tradizionale.
+</li>
+  <li><b>Si possono individuare dei luoghi geografici dove la propagazione di
+fake news è maggiore? </b><br>
+Non ci sono luoghi specifici dove la propagazione di fake news è
+generalmente maggiore. Le fake news si “muovono” seguendo le notizie vere
+che hanno una forte rilevanza mediatica.
+</li>
+  <li><b> Che tecniche vengono utilizzate per individuare una fake news e poter
+quindi distinguerla dalle notizie affidabili?
+</b><br>
+La letteratura scientifica ha studiato diverse tecniche per individuare
+automaticamente le fake news, che possono far leva o sul contenuto stesso
+della notizia, per capire se è vero o falso, o sul suo contesto (ad es. il suo
+profilo di diffusione all’interno della rete), o entrambe. Queste tecniche fanno
+spesso uso di algoritmi di machine learning e intelligenza artificiale per
+identificare le notizie false. E’ importante precisare che, sebbene gli ultimi
+anni abbiano visto una evoluzione significativa dei modelli di riconoscimento
+automatico, la complessità stessa del problema e il gran numero di elementi
+in gioco fanno sì che esso sia ben lontano dall’essere risolto in maniera
+automatica.
+</li>
+
+  <li><b>Che consigli si dovrebbero dare per far sì che la popolazione sappia
+riconoscere una fake news? </b><br>
+Sarebbe auspicabile educare le persone a valutare in modo critico le fonti di
+informazione, verificare la provenienza delle notizie e cercare fonti affidabili.
+Andrebbe anche sempre incoraggiata la verifica incrociata delle informazioni,
+cercando fonti diverse e confrontando le notizie per individuare eventuali
+discrepanze o incongruenze.
+</li>
+
+  <li><b>Quali sono le principali conseguenze della propagazione delle fake
+news?
+ </b><br>
+La propagazione delle fake news ha diverse conseguenze negative, perché
+compromette la capacità delle persone di prendere decisioni informate. Le
+fake news alimentano la polarizzazione e il conflitto, creando tensioni tra
+gruppi con opinioni diverse, contribuendo all'instabilità sociale.
+Infine, le fake news possono avere un importante impatto economico, quando
+causano incertezza negli investimenti e danneggiano l'immagine di aziende o
+soggetti pubblici.
+
+</li>
+
+  <li><b> Che soluzioni si potrebbero adottare per impedire la divulgazione di fake
+news?</b><br>
+Le contromisure che potrebbero essere adottate per contrastare la diffusione
+di fake news sono molteplici. Alcune di queste sono tecniche, altre
+giurisprudenziali e normative.
+Dal punto di vista tecnico, soluzioni utili potrebbero essere l'implementazione
+di meccanismi automatici di fact-checking e fake news detection. Oltre a
+questo, sarebbe molto importante creare delle piattaforme condivise e
+aggiornate contenenti notizie verificate in precedenza. Servizi di questo tipo
+potrebbero essere utili sia ai cittadini, sia per sostenere la ricerca nell’ambito
+del riconoscimento automatico.
+Le soluzioni “automatiche”, anche le più efficaci, non possono prescindere da
+un’analisi critica e informata dei fatti da parte degli utenti. Sarebbe infatti
+importante incoraggiare la responsabilità individuale, in modo che gli utenti
+verifichino le fonti prima di condividere informazioni. Dal punto di vista
+normativo sarebbe auspicabile avere leggi e regolamenti efficaci che,
+operando nel rispetto della libertà di espressione, limitino e puniscano la
+diffusione di notizie false.
+Un approccio collettivo tra società civile, istituzioni e piattaforme online
+sarebbe essenziale per affrontare con successo questo problema
+</li>
+
+  <li><b>Come si può descrivere il sottile rapporto tra fake news e libertà
+d’espressione? </b><br>
+Il rapporto tra fake news e libertà di espressione è complesso, ma non sottile.
+La libertà di espressione è un diritto fondamentale che permette alle persone
+di esprimere le proprie opinioni senza interferenze o censure.
+Le fake news, per definizione, vengono diffuse deliberatamente con l'intento
+di ingannare e manipolare l'opinione pubblica. Proprio il concetto di
+intenzionalità nella diffusione di informazioni false è cruciale per tracciare una
+linea chiara tra i due aspetti.
+</li>
+
+  <li><b>Quale può essere la motivazione che spinge una persona a
+ritwittare/condividere una fake news piuttosto che una notizia vera?
+ </b><br>
+Ci sono diverse motivazioni che possono spingere una persona a condividere
+una fake news piuttosto che una notizia vera.
+Innanzitutto, la condivisione potrebbe semplicemente essere inconsapevole
+(i.e., il soggetto non sapeva che fosse una fake news). Questo può avvenire
+ad esempio nel contesto delle breaking news, in cui è difficile verificare in
+tempo reale la fonte e la veridicità della notizia, e si preferisce non farlo.
+Inoltre, la condivisione potrebbe avvenire con fini ingannevoli o manipolativi,
+al fine di influenzare l'opinione pubblica o raggiungere obiettivi politici, sociali
+o economici.
+Al netto dei casi in cui le fake news vengono diffuse intenzionalmente, alcune
+persone potrebbero essere "pigre", ovvero meno propense a fare ricerche o a
+controllare le fonti, fidandosi invece dell'apparenza o della convinzione
+personale.
+Proprio le convinzioni personali giocano un ruolo molto importante: le persone
+spesso tendono a condividere informazioni che confermano le loro opinioni
+preesistenti o i loro pregiudizi (bias di conferma). Se una fake news supporta
+le loro idee o credenze, potrebbero condividerla senza pensarci due volte,
+ignorando la sua validità. Questo è inoltre amplificato dai meccanismi dei
+social media che tendono a creare delle eco chamber intorno ai propri utenti.
+Inoltre, il sensazionalismo e il coinvolgimento emotivo possono giocare un
+ruolo nella condivisione. Le fake news spesso sono scritte in modo
+sensazionalistico e mirano a suscitare forti reazioni emotive come rabbia,
+paura o indignazione. Queste emozioni intense possono spingere le persone
+a condividerle senza verificare la loro accuratezza, nell'impulso di far sentire
+la propria voce su questioni che considerano importanti.
+</li>
+</ol>
+            
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card mb-4 mt-4">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link d-inline" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Paolo Passaglia
+        </button>
+        <h6 class="card-subtitle text-muted d-inline ml-4">Esperto di diritto e autore dell'articolo "Fake news e fake democracy: una convergenza da scongiurare"</h6>
+        <button type="button" class="close d-inline" aria-label="Close" onclick="toggleCollapse('collapseThree')">
+          <span class="arrow-icon" aria-hidden="true"></span>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body d-flex">
+        <div class="row">
+          <div class="col-md-2">
+            <img class="rounded-circle profile-image" src="passaglia.jpg" alt="Expert Image" style="max-width: 100%;">
+          </div>
+          <div class="col-md-10 text-justify">
+<ol>
+<li><b>Qual è la definizione che lei darebbe oggi al termine fake news?</b>
+<br>Una definizione non la darei in quanto è un concetto estremamente banale e banalizzante. Non so se sa da dove arriva l’utilizzo del termine “fake news”, ma questo ha iniziato a diffondersi durante la campagna elettorale per le presidenziali negli Stati Uniti che contrapponeva Trump alla Clinton; i giornalisti dicevano una serie di cose totalmente vere nei confronti di Trump e questo rispondeva “fake news”, ossia notizia spazzatura, notizia falsa. Da lì è iniziato l’utilizzo massiccio del termine . Pertanto, mi mette a disagio utilizzare questa espressione, nonostante sia poi diventata comune. Comunque, ci sono definizioni come “disinformazione”, “misinformazione” che sono concetti molto più veri, rispetto a fake news. Fake news la ritengo più un’abbreviazione ad uso e consumo dei titoli di giornali che hanno bisogno di poche lettere. 
+</li>
+
+<li><b>Avendo nominato i giornali, oltre a questi, quali altri canali di diffusione utilizzano le fake news per diffondersi?</b>
+<br>I social media sono i motori fondamentali delle fake news. 
+<br>Per quanto riguarda i giornali: il citizen journalism è una gran cosa, però va maneggiata con cautela. Mi spiego meglio: un conto è il giornalista che è iscritto all’ordine, che deve rispettare determinate regole deontologiche, che dovrebbe essere quindi il primo garante di quello che scrive (e se non lo è lui, ci dovrebbe essere qualcun’altro insieme a lui, e cioè il direttore del giornale e ancora l’editore). C’è quindi un sistema costruito giuridicamente per proteggere. Poi, quanto questo funzioni è un altro discorso. 
+<br>Al contrario, il citizen journalism è un procedimento, una dinamica che sfugge completamente a questo inquadramento, nonostante sia molto utile e importante. Si deve quindi prenderlo in considerazione tenendo conto che non ha questa armatura che lo protegge. É come se da un lato si avesse un individuo costretto da una serie di vincoli sacrosanti, e poi ce ne fosse un altro che è invece libero di dire più o meno quello che gli pare. 
+<br>Quando però i giornali riportano pari pari una fake news nata e diffusa su un altro canale, questi stanno avendo una mancanza ai doveri di controllo e alla deontologia del giornalista. Un altro caso è il giornalista che cita il post di facebook, per esempio, e riporta la fake news: qui il giornalista non fa tecnicamente qualcosa di improprio, in quanto la notizia diventa non quello che c’è scritto nel post, ma è il post stesso a diventare. Il confine diventa comunque labile: in una società dell’informazione dove ciò che conta è l’inserimento nel motore di ricerca, se si fa un articolo dove si cita un post, comunque questa fake news viene alimentata. Si deve trovare il lettore che ha sufficiente attenzione e consapevolezza per discriminare. 
+</li>
+
+<li><b>Prima lei ha citato Trump e Clinton, quindi l’ambito politico; oltre a questo, secondo lei esistono altri ambiti dove circolano le fake news?</b>
+<br>Le fake news esistono da sempre un po’ in tutti i settori. Non esistono settori che mostrano una particolare prevalenza di fake news rispetto ad altri, semplicemente si riscontrano settori più esposti in determinate contingenze. 
+<br>Non è che nella politica esistono più fake news che altrove, semplicemente in ambito elettorale è più facile che ce ne siano di più  riguardanti la politica; la bufala in quel momento può essere funzionale ad avere risultati immediati.
+<br>Durante la pandemia, non era la politica il settore ad avere più fake news poichè era una contingenza dove il contesto sanitario diventava quello più significativo. Ho la sensazione che se oggi si facesse una raccolta di fake news degli ultimi 10 giorni, probabilmente l’ambito più gettonato sarebbe quello climatico perché laddove c’è la notizia, è più facile che ci sia la fake news. Qual è la motivazione? Le fake news sono alimentate dal dibattito e a loro volta lo alimentano. Se il dibattito è corposo in una certa materia, è più facile ci sia la fake news. Le faccio un esempio: in Francia è stata fatta una legge contro la disinformazione. Questa legge è molto blanda per quanto riguarda la disinformazione in generale, e tanto rigorosa (poi rivelatasi tanto rigorosa da essere inutile) con riferimento alle fake news, che possono avere un’incidenza sulla sincerità dello scrutinio, date nei tre mesi anteriori alle elezioni. Da ciò si deduce che, quando si presenta “l’emergenza” di una campagna elettorale (intesa come non inquinata), diventa evidente la presenza di fake news, contro le quali è necessario prendere provvedimenti.  
+La consapevolezza di quanto le fake news possano avere un impatto diretto sull’esito di votazioni è stata una conseguenza di due occasioni importanti a livello mondiale: l’elezione di Trump e la Brexit. 
+</li>
+
+<li><b>Secondo lei quali sono le motivazioni principali per la quale una persona crea e diffonde una fake news?</b>
+<br>Dipende dal tipo di fake news che intende. Se si considera la fake news scritta da un utente qualsiasi su un social e che per qualche motivo diventa gradualmente virale, le motivazioni possono essere molteplici. Le vere fake news sono invece quelle create da un certo apparato, che costruisce la notizia per farla girare attraverso i bot fino a farla diventare virale. In questo caso gli interessi sono più seri, in quanto ci può essere un vantaggio politico, come ad esempio il fatto che sia stato dimostrato che dietro alle elezioni che hanno favorito Trump ci sia stata la Russia di Putin. Oppure il vantaggio può essere economico, basti pensare alle fake news in materia sanitaria riguardo le vaccinazioni o l’utilizzo di Aspirina contro il Covid-19. 
+<br>Ad ogni modo, quelle più pericolose sono quelle generate ad arte per creare instabilità e queste esistono da sempre. Proprio ieri ascoltavo un podcast che ricostruiva i rapporti fra Radio Londra, Radio Parigi e Radio Vichy in Francia durante l’occupazione: le ultime due erano una massa di fake news costruite per smontare l’attendibilità di Radio Londra con il solo fine di creare instabilità.
+</li>
+
+<li><b>Proprio per evitare instabilità allora, secondo lei quali sono le tecniche che si possono usare per non cadere nelle fake news?</b>
+<br>Non ho gli strumenti per rispondere a questa domanda, però posso rispondere a una domanda prossima a questa, e cioè “Possono i pubblici poteri fare qualcosa?”. Innanzitutto, possono trovare delle forme - quali esattamente siano è complicato dirsi - di generalizzazione di una competenza informatica e culturale sufficiente all’individuo medio per capire che si tratta di un’idiozia. 
+<br>Poi c’è lo spinosissimo problema di consentire o meno ai pubblici poteri di operare un controllo sulle fake news e/o farlo operare dai gestori delle piattaforme. Mi spiego meglio: da sempre esistono due impostazioni che sono diventate espressioni, ossia quella americana dove si può dire quello che si vuole con pochissime limitazioni, e quella europea dove si può dire quello che si vuole, però con certi limiti. In ambito transnazionale però quello che uno dice in America arriva in Europa senza ostacoli e di per sé questo costituisce già un problema. 
+<br>Inoltre, agire su una disinformazione significa legittimare i pubblici poteri a stabilire qual è la verità. 
+<br>Detto questo però, se ci sono dei limiti alla libertà d’espressione, in qualche modo si devono far valere. E allora, nel mondo reale si fanno valere attraverso un filtro: nel mondo analogico non c’è una libertà d’espressione vera e propria, ma c’è una volta che si entra in un certo campo. Più precisamente, per esprimere la propria opinione si deve entrare in un circuito, sia la televisione, i giornali o la stesura di un libro.
+<br>Tuttavia, in ognuno di questi viene applicato un filtraggio in quanto ciò che viene detto sarà poi responsabilità del direttore del quotidiano, dell’editore ecc. Quindi, si è in un ambito dove non c’è un vero e proprio free market place of ideas. 
+<br>Al contrario, i social rappresentano un ambito totalmente aperto, nel quale si deve cercare di far rispettare i limiti imposti e quando ci si accorge che non ci sono gli strumenti per farlo, si deve ricorrere al gestore della piattaforma, che però è un soggetto privato. Far rispettare i limiti a Twitter due anni fa e farli rispettare ora con Elon Musk, è un’altra cosa. 
+<br>Quindi l’accesso all'informazione, che prima era limitato, creava una dinamica per cui l’informazione circolava essenzialmente su un criterio di autoritas, mentre oggi in un mercato delle idee, che non è più regolato, il criterio è l’attrattività della notizia. Le faccio un esempio: nel 1980 di fronte a una pandemia e di fronte alla possibilità di vaccinarsi o meno, cosa sarebbe successo? Tre o quattro virologi vanno in televisione e spiegano i pro e i contro, mostrando un generale consenso (perché nella comunità scientifica c’è consenso verso i vaccini); arriva poi uno che è molto contrario, lo fanno parlare in televisione nonostante sia magari un ingegnere edile che non sa nulla di vaccini. Oggi non funziona così: è più facile che un’idiozia in materia di vaccinazione detta da quello che costruisce ponti, siccome è detta in maniera attrattiva, magari circola di più, più rapidamente e fa più breccia rispetto al discorso, magari più barboso, di colui che per quarant’anni ha studiato gli effetti sui vaccini. Tutto questo, per il giurista è spiazzante in quanto non ha gli strumenti: li ha costruiti nel vecchio mondo e si trova ora ad arrabattarsi con quello che ha nel nuovo.
+
+</li>
+
+<li><b>L’ultima domanda, alla quale ha praticamente già risposto, riguarda il fragile rapporto che esiste tra fake news e libertà d’espressione. Vuole aggiungere altro?</b>
+<br>Fin quando si tratta di scienze dure, il problema deriva proprio dall’impostazione metodologica. Però quando si abbandona questo ambito, la situazione è ancora più grave perché quello che per una persona è fake, può non esserlo per un’altra e non c’è la possibilità di dire chi ha ragione. Il confine tra l’errore e un’interpretazione ardita è un un confine labile, quindi si dovrebbe andare a vedere l’intenzione del soggetto ma si andrebbe a toccare un qualcosa che si pensava di aver debellato con la fine dell’Inquisizione, cioè il diritto che va a toccare il pensiero dell’essere umano, la sua libertà di opinione che per ora è senza limiti; tutt’al più il problema è l’espressione dell’opinione. Però se si comincia a parametrare il tipo di falsità sull’intenzionalità, forse è meglio non andare così in profondità. </li>
+
+</ol>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   
+  <!-- End of card structure -->
+</div>
+    <!-- End of accordion -->
+
+    <!-- Footer -->
+    <footer class="footer section-dark">
+      <div class="container">
+        <div class="row">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a>Designed with love in 2023</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="credits ml-auto">
+            Realizzato da:
+            <a href="about.html" target="_blank">Vincenzo Sammartino</a>,
+            <a href="about.html" target="_blank">Lucrezia Labardi</a>,
+            <a href="about.html" target="_blank">Rebecca Guolo</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Paper Kit 2 JS -->
+    <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/bootstrap.min.js"></script>
+    <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/paper-kit.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+      function toggleCollapse(collapseId) {
+        var collapseElement = $('#' + collapseId);
+        var arrowIcon = collapseElement.prev().find('.arrow-icon');
+
+        if (collapseElement.hasClass('show')) {
+          collapseElement.collapse('hide');
+          arrowIcon.html('&darr;');
+        } else {
+          collapseElement.collapse('show');
+          arrowIcon.html('&uarr;');
+        }
+      }
+    </script>
+  </body>
+
+</html>

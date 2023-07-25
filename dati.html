@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Journalism Project - Dati</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Paper Kit 2 CSS -->
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/paper-kit.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- D3.js -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<style>
+/* This will affect the entire document */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scroll handle */
+  border-radius: 5px; /* Round the corners of the scroll handle */
+}
+
+b{
+font-weight: bold;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken the color of the scroll handle on hover */
+}
+.custom-table {
+  width: 90%;
+  margin: auto;
+}
+.justify-content-center{
+    overflow-wrap: break-word;
+}
+.border-bottom-solid {
+  border-bottom: 2px solid #000;
+}
+
+
+.img-fluid{
+width: 60%;
+display: block;
+margin: auto;
+}
+
+.navbar{
+ background-color: #324a7f;
+}
+.box h3{
+font-weight: bold;
+text-align: center;
+}
+
+
+</style>
+
+
+</head>
+
+<body class="about-us">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand text-white" href="index.html">Data Journalism</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dati.html">Dati</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="analisi.html">Analisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="interviste.html">Interviste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Corpo -->
+ 
+ 
+ 
+<div class="wrapper">
+  <div class="page-header page-header-small section-image" style="background-image: url('img/dati.jpg'); background-position:top;">
+    <div class="content-center">
+      <div class="container text-white">
+        <h1>Dati sulle Fake News</h1>
+        <p>Di seguito sono riportati alcuni dati e statistiche relativi al fenomeno delle fake news.</p>
+        
+        <div class="row mt-4 mb-4">
+          <div class="col-md-6">
+            <h3>Numero di fake news identificate</h3>
+            <p>Il nostro team ha individuato e analizzato un totale di circa 30 mila fake news durante il periodo di studio.</p>
+          </div>
+          <div class="col-md-6">
+            <h3>Fonti di diffusione delle fake news</h3>
+            <p>Le principali fonti di diffusione delle fake news includono social media come Twitter e Afterschool, oltre a siti web di notizie non affidabili.</p>
+          </div>
+        </div>
+        <!-- Puoi aggiungere altre sezioni di dati qui -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-justify">
+<h2>Dataset sulle Fake News</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="box">
+        <h3>1. Teen Fake News Poll on After School</h3>
+        <p>Dataset che comprende le risposte ad un sondaggio effettuato sul social network “After School”, formato da 5 domande poste a circa 40 mila studenti di diversi stati americani, di età stimata tra i 14 ed i 18 anni. I risultati sono stati pubblicati nel 2017.</p>
+        <p>Le domande e le risposte sono consultabili nella sezione Analisi e riguardano la consapevolezza degli studenti riguardo alla tematica e alla presenza di fake news online.</p>
+        <p>Per le analisi non è stata considerata la suddivisione degli studenti in stati.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box">
+        <h3>2. LIAR</h3>
+        <p>Dataset composto da 12 mila brevi dichiarazioni raccolte dal sito politifact.com con lo scopo iniziale di effettuare un task di Fake News Detection. Per le analisi sono stati sfruttati tutti i dati a disposizione senza considerare la suddivisione in training, validation e test set.</p>
+        <p>I risultati dello studio sugli ambiti e sui canali di diffusione delle fake news sono stati effettuati riportando i record ad un numero limitato di categorie così da poterne studiare la distribuzione.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="box">
+        <h3>3. Fake</h3>
+        <p>Dataset di titoli e testi estratti da 13 mila notizie ricavate da 244 siti web, ed etichettati come falsi dall’estensione di Google BS Detector. Si tratta di fake news di cui è stata studiata la lingua ed il paese di provenienza e le parole più frequenti. Fondamentale per esplorare il fenomeno del clickbaiting ed analizzare le parole più frequenti che possono attirare l’attenzione degli utenti.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="box">
+        <h3>4. FakeNewsNet</h3>
+        <p>Dataset composto da 23 mila articoli di news pubblicati sul social media Twitter, sia veri che falsi. Essendo etichettato il numero di retweet è stato possibile quantificare per i dati sia veri che falsi la probabilità di ottenere più di un certo numero di retweet. Le statistiche emerse sono interessanti per esplorare la viralità delle notizie stesse.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="box">
+        <h3>5. Google Trends</h3>
+        <p>Strumento di Google utilizzato per indagare la frequenza di ricerca dell’espressione “fake news” in un intervallo di tempo dal 1/1/2014 al 1/1/2023 negli Stati Uniti. Le tendenze sono state incrociate con il periodo di presidenza di Trump (2016-2021) e con i maggiori eventi registrati in quegli anni.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<!-- Corpo -->
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Il metodo di lavoro</h2>
+          <div class="container">
+    <div class="row mb-4 mt-4">
+    <div class="col-sm-12">
+      <!-- <img src="img/ciambella.png" class="img-fluid" alt="Image 1"> -->
+    </div>
+<p class="text-justify">Il lavoro sui dati è consisitito in diverse fasi, a partire dalla ricerca e dall’analisi preliminare dei dataset. Gran parte del lavoro è presentato in una <a href="https://drive.google.com/drive/folders/1us6TnRdha4FqCUiLfDaSUoJSrEcUjqqW?usp=drive_link">cartella condivisa su Google Drive</a>, che ha permesso di collaborare a livello di codice tramite Google Colab. I dati di ciascun dataset sono stati ripuliti, eliminando i valori mancanti e quelli nulli, ripulendo le celle in modo da ottenere record coerenti ed ulteriormente analizzabili. Nel trattare le stringhe di testo si è provveduto a normalizzarle, eliminando punteggiatura, maiuscole e in certi casi anche le parole funzionali. Gli strumenti utilizzati sono stati <b>Pandas, matplotlib, Seaborn e Nltk</b>. I dati che richiedevano ulteriore approfondimento sono stati esportati in file excel e/o csv per poterli sfruttare tramite altri software.
+<br>Per la fase di realizzazione dei grafici si sono utilizzati principalmente <b>Tableau</b> Desktop (unito a Tableau Public per la pubblicazione) e Microsoft Excel. Le molteplici funzionalità di queste applicazioni hanno permesso di esplorare ulteriormente i dati ottenuti in modo da poterli mostrare al pubblico in modo chiaro ed efficace. 
+</p>
+</div></div>
+<!-- <a href="script/script.js" download>Scarica il file</a> -->
+        <p>Di seguito viene riportato il dataset interattivo "FakeNewsNet" (Realizzato con D3.js)</p>
+  <div class="row align-items-center border-bottom-solid mb-2 mt-4">
+    <div class="col-3 justify-content-start">title</div>
+    <div class="col-4 justify-content-center">news_url</div>
+    <div class="col justify-content-center">source_domain</div>
+    <div class="col justify-content-center">tweet_num</div>
+    <div class="col justify-content-center">real</div>
+    </div>
+          <div id="table-container" class="container mb-4">
+          </div>
+
+          <button id="prevBtn" class="btn btn-primary ml-2 mt-2">Indietro</button>
+          <button id="nextBtn" class="btn btn-primary mt-2 ml-4">Avanti</button>
+
+        
+      <script>
+  // Variabili per la paginazione
+  const container = d3.select('#table-container table').attr('class', 'custom-table');
+const itemsPerPage = 10;
+let currentPage = 1;
+
+let data = null;
+
+d3.csv('FakeNewsNet.csv')
+  .then(d => {
+    data = d;
+    updateTable();
+  });
+
+function updateTable() {
+  let start = (currentPage - 1) * itemsPerPage;
+  let end = start + itemsPerPage;
+
+  let pageData = data.slice(start, end);
+
+  const container = d3.select('#table-container');
+
+  container.selectAll('.row').remove();
+
+  let rows = container.selectAll('.row')
+    .data(pageData).enter()
+    .append('div')
+    .attr('class', 'row flex-wrap align-items-center');
+
+  let cols = rows.selectAll('.col')
+    .data(function(row) {
+      return [row.title, row.news_url, row.source_domain, row.tweet_num, row.real];
+    }).enter()
+    .append('div')
+    .attr('class', function(d, i) {
+      if (i === 0) {
+        return 'col-3 justify-content-start';
+      } else if (i === 1) {
+        return 'col-4 justify-content-center';
+      } else if (i === 2) {
+        return 'col-2 justify-content-center';
+      } else if (i === 3) {
+        return 'col justify-content-center';
+      } else {
+        return 'col justify-content-center';
+      }
+    })
+    .text(function(value) {
+      return value;
+    });
+}
+
+
+
+  const headers = ['title', 'news_url', 'source_domain', 'tweet_num', 'real'];
+
+  const headerRow = container.append('div')
+    .attr('class', 'row align-items-center border-bottom');  // Add bottom border to the header row
+
+  headerRow.selectAll('.col')
+    .data(headers).enter()
+    .append('div')
+    .attr('class', function(d, i) {
+      if (i === 0) {
+        return 'col-3 justify-content-start';
+      } else if (i === 1) {
+        return 'col-4 justify-content-center';
+      } else {
+        return 'col justify-content-center';
+      }
+    })
+    .text(function(header) {
+      return header;
+    });
+
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  if (currentPage > 1){
+    currentPage--;
+    updateTable();
+  }
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  if (currentPage < Math.ceil(data.length / itemsPerPage)){
+    currentPage++;
+    updateTable();
+  }
+});
+
+</script>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<!-- Footer -->
+  <footer class="footer section-dark mt-4">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a>Designed with love in 2023</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="credits ml-auto">
+          Realizzato da:
+          <a href="about.html" target="_blank">Vincenzo Sammartino</a>,
+          <a href="about.html" target="_blank">Lucrezia Labardi</a>,
+          <a href="about.html" target="_blank">Rebecca Guolo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Paper Kit 2 JS -->
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/bootstrap.min.js"></script>
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/paper-kit.min.js"></script>
+</body>
+
+</html>
+

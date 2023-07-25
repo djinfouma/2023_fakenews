@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Journalism Project - Chi siamo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+  <!-- Paper Kit 2 CSS -->
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://demos.creative-tim.com/paper-kit-2/assets/css/paper-kit.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom CSS -->
+  <style>
+        .rounded-circle {
+  width: 250px; /* Adjust the width as needed */
+  height: 250px; /* Adjust the height as needed */
+}
+/* This will affect the entire document */
+::-webkit-scrollbar {
+  width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scroll handle */
+  border-radius: 5px; /* Round the corners of the scroll handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darken the color of the scroll handle on hover */
+}
+.navbar{
+ background-color: #324a7f;
+}
+
+  </style>
+</head>
+
+<body class="about-us">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand text-white" href="index.html">Data Journalism</a>
+        <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-bar bar1"></span>
+          <span class="navbar-toggler-bar bar2"></span>
+          <span class="navbar-toggler-bar bar3"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav">
+		  <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="dati.html">Dati</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="analisi.html">Analisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="interviste.html">Interviste</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Corpo -->
+  <div class="wrapper">
+    <div class="page-header page-header-small section-image" style="background-image: url('img/about.jpg');">
+  <div class="content-center">
+    <div class="container text-white">
+      <h1>Chi siamo</h1>
+    </div>
+  </div>
+</div>
+
+    <div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="vincenzo.jpg" alt="Vincenzo Sammartino" class="rounded-circle img-fluid w-60">
+        <h3 class="title">Vincenzo Sammartino</h3>
+        <p class="description">
+          Web Designer
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/VincetHD" target="_blank" class="icon-link">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/il_samaritano/" target="_blank" class="icon-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vincenzo-sammartino-0339191a1/" target="_blank" class="icon-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="lucrezia.jpg" alt="Lucrezia Labardi" class="rounded-circle img-fluid w-60">
+        <h3 class="title">Lucrezia Labardi</h3>
+        <p class="description">
+          Developer
+        </p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/lucrezialabardi" target="_blank" class="icon-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="rebecca.jpg" alt="Rebecca Guolo" class="rounded-circle img-fluid w-60">
+        <h3 class="title">Rebecca Guolo</h3>
+        <p class="description">
+          Journalist
+        </p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/rebeccaguolo/" target="_blank" class="icon-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rebecca-guolo-409022256/" target="_blank" class="icon-link">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="mt-4 text-center">
+    Questo sito è stato realizzato da noi per l'esame di Data Journalism, le foto inserite nella pagina iniziale sono state prese dal sito <a href="pixabay.com">pixabay.com</a>
+    <br>I linguaggi utilizzati per la parte web sono HTML, CSS, JavaScript e D3.js per la visualizzazione dei grafici.
+    <br> Per le analisi e per i grafici statici è stato utilizzato Python con le relative librerie.
+    </p>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer section-dark">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-nav">
+          <ul>
+            <li>
+              <a>Designed with love in 2023</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="credits ml-auto">
+          Realizzato da:
+          <a href="about.html" target="_blank">Vincenzo Sammartino</a>,
+          <a href="about.html" target="_blank">Lucrezia Labardi</a>,
+          <a href="about.html" target="_blank">Rebecca Guolo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Paper Kit 2 JS -->
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/bootstrap.min.js"></script>
+  <script src="https://demos.creative-tim.com/paper-kit-2/assets/js/paper-kit.min.js"></script>
+</body>
+
+</html>
